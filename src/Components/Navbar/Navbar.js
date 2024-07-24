@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import logo from "../../assets/logo.png";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/alphamotors.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,15 +8,20 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   const scrollToTop = () => {
-    window.scrollTo({top:0, behavior:'smooth'})
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <nav className="bg-slate-500 p-4 sticky top-0 z-30">
       <div className=" container mx-auto flex justify-between items-center p-2">
-       <div className=' justify-start'>
-            <img src={logo} alt="" onClick={scrollToTop}  />
-            </div>
+        <div className=" justify-start">
+          <img
+            src={logo}
+            alt=""
+            onClick={scrollToTop}
+            className="cursor-pointer"
+          />
+        </div>
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
